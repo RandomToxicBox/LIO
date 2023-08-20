@@ -1,0 +1,33 @@
+.lio-section {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: calc(100% - 200px);
+  height: 700px;
+  padding: 0 0 0 200px;
+}
+.lio-section_grey {
+  background-color: var(--grey4);
+}
+.lio-section__text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 523px;
+}
+.lio-section__header_gradient {
+  background: var(--blue-gradient3);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.lio-section__text {
+  color: var(--black2);
+}
+.lio-section__link-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+/*# sourceMappingURL=main.css.map */

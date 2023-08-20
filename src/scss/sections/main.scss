@@ -1,0 +1,38 @@
+.lio-section {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: calc(100% - 200px);
+  height: 700px;
+  padding: 0 0 0 200px;
+
+  &_grey {
+    background-color: var(--grey4);
+  }
+
+  &__text-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 523px;
+  }
+
+  &__header {
+    &_gradient {
+      background: var(--blue-gradient3);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+
+  &__text {
+    color: var(--black2);
+  }
+
+  &__link-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+}
