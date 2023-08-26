@@ -20,6 +20,16 @@
   --blue-gradient3: linear-gradient(95deg, #1583E8 2.08%, #39B4DE 57.37%, #46C7F3 100%);
 }
 
+body {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
 .h1 {
   font-family: "SF", sans-serif;
   font-size: 70px;
@@ -78,14 +88,19 @@ a {
   font-style: normal;
 }
 .lio-header {
-  position: fixed;
-  top: 0;
   display: flex;
   justify-content: center;
   gap: 128px;
   width: 100%;
   height: 70px;
   background: var(--black);
+}
+
+.lio-body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow-y: auto;
 }
 
 .lio-nav {
@@ -101,10 +116,14 @@ a {
   font-family: "SF", sans-serif;
   font-size: 14px;
   font-weight: 400;
+  user-select: none;
+  cursor: pointer;
   transition: 0.3s ease-in-out color;
 }
-.lio-nav__item:hover, .lio-nav__item:active {
+.lio-nav__item:hover {
   text-decoration: underline;
+}
+.lio-nav__item:hover, .lio-nav__item_active {
   color: var(--blue2);
 }
 

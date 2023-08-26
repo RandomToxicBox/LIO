@@ -1,19 +1,20 @@
 document.addEventListener("DOMContentLoaded", () => {
     const sectionContainer = document.getElementById("app");
 
-    // Load default section
     loadSection("sections/main.html");
 
-    // Handle navigation to load different sections
-    const navigationLinks = document.querySelectorAll(".navigation-link");
+    const navigationLinks = document.querySelectorAll(".lio-nav__item");
+
+    activateTab('main', navigationLinks, 'lio-nav__item_active')
+
     navigationLinks.forEach(link => {
-        link.addEventListener("click", event => {
+      link.addEventListener("click", event => {
             const sectionToLoad = event.target.getAttribute("data-section");
-            loadSection(sectionToLoad);
+            activateTab(sectionToLoad, navigationLinks, 'lio-nav__item_active')
+            loadSection(`sections/${sectionToLoad}.html`);
         });
     });
 
-    // Function to load sections
     function loadSection(sectionURL) {
         fetch(sectionURL)
             .then(response => response.text())
@@ -25,3 +26,8 @@ document.addEventListener("DOMContentLoaded", () => {
             });
     }
 });
+
+function activateTab(activeSection, elements, className) {
+    Array.from(elements).find(el => el.getAttribute('data-section') === activeSection).classList.add(className);
+    Array.from(elements).filter(el => el.getAttribute('data-section') !== activeSection).forEach(el => el.classList.remove(className));
+}
