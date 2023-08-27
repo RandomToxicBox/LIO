@@ -2,10 +2,17 @@
   "name": "lio",
   "version": "1.0.0",
   "description": "",
+  "keywords": [],
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "scss": "sass --watch src/scss:dist/css"
+    "scss": "sass --watch src/scss:dist/css",
+    "build": "webpack",
+    "build:dev": "npm run build -- --mode=development",
+    "build:prod": "npm run build -- --mode=production",
+    "serve": "webpack serve",
+    "serve:dev": "npm run serve -- --mode=development",
+    "serve:prod": "npm run serve -- --mode=production",
+    "start": "npm run serve:dev -- --no-open"
   },
   "repository": {
     "type": "git",
@@ -18,6 +25,36 @@
   },
   "homepage": "https://github.com/RandomToxicBox/LIO#readme",
   "devDependencies": {
-    "sass": "^1.66.1"
+    "@babel/core": "^7.22.10",
+    "@babel/plugin-proposal-class-properties": "^7.18.6",
+    "@babel/preset-env": "^7.22.10",
+    "babel-loader": "^9.1.3",
+    "clean-webpack-plugin": "^4.0.0",
+    "copy-webpack-plugin": "^11.0.0",
+    "css-loader": "^6.8.1",
+    "css-minimizer-webpack-plugin": "^5.0.1",
+    "dotenv": "^16.3.1",
+    "extract-loader": "^5.1.0",
+    "favicons": "^7.1.4",
+    "favicons-webpack-plugin": "^6.0.1",
+    "file-loader": "^6.2.0",
+    "html-loader": "^4.2.0",
+    "html-webpack-plugin": "^5.5.3",
+    "http-server": "^14.1.1",
+    "json5": "^2.2.3",
+    "media-query-splitting-plugin": "^2.0.10",
+    "mini-css-extract-plugin": "^2.7.6",
+    "postcss": "^8.4.28",
+    "postcss-extract-media-query": "^3.0.0",
+    "postcss-loader": "^7.3.3",
+    "sass": "^1.66.1",
+    "sass-loader": "^13.3.2",
+    "style-loader": "^3.3.3",
+    "svg-chunk-webpack-plugin": "^4.0.2",
+    "toml": "^3.0.0",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1",
+    "yamljs": "^0.3.0"
   }
 }

@@ -1,0 +1,64 @@
+$breakpoints: (
+        xxxxxs: 360px,
+        xxxxs:  400px,
+        xxxs:   480px,
+        xxs:    600px,
+        xs:     720px,
+        s:      840px,
+        m:      960px,
+        l:      1024px,
+        xl:     1280px,
+        xxl:    1440px,
+        xxxl:   1600px,
+        xxxxl:  1920px,
+        xxxxxl: 2560px
+);
+
+.section,
+.header,
+.main,
+.aside,
+.footer {
+  display: block;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  margin: 0 auto;
+  padding: 0;
+}
+
+@media screen and (max-width: 480px) {
+  .content {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 480.1px)  and (max-width: 960px) {
+  .content {
+    width: 400px;
+  }
+}
+
+@media screen and (min-width: 960.1px) and (max-width: 1440px) {
+  .content {
+    width: 800px;
+  }
+}
+
+@media screen and (min-width: 1440.1px) and (max-width: 1920px) {
+  .content {
+    width: 1200px;
+  }
+}
+
+@media screen and (min-width: 1920.1px) {
+  .content {
+    width: 1600px;
+  }
+}

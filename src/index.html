@@ -1,30 +1,173 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html dir="<%= dir %>" lang="<%= lang %>">
 <head>
-    <meta charset="UTF-8">
-    <title>ЛИО-продукт</title>
-    <link rel="stylesheet" href="../dist/css/style.css">
-    <link rel="stylesheet" href="../dist/css/sections/main.css">
+    <title><%= title %></title>
 </head>
 <body>
-<header class="lio-header">
-    <a href="#" class="lio-logo"></a>
-    <nav class="lio-nav">
-        <span class="lio-nav__item" data-section="main">О компании</span>
-        <span class="lio-nav__item" data-section="technology">Технологии</span>
-        <span class="lio-nav__item" data-section="philosophy">Философия</span>
-        <span class="lio-nav__item" data-section="science">Наука</span>
-        <span class="lio-nav__item" data-section="products">Продукция</span>
-        <span class="lio-nav__item" data-section="company">Галерея</span>
-        <span class="lio-nav__item" data-section="contacts">Контакты</span>
-    </nav>
-</header>
 
-<div id="app" class="lio-body"></div>
+<div id="root">
+    <header class="header">
+        <div class="content">
+            <a class="header_logo" href="/" title="<%= title %>">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 229 151" fill="none">
+                    <g clip-path="url(#clip0_265_62)">
+                        <path d="M29.59 7.26C31.5948 7.26 33.22 5.63479 33.22 3.63C33.22 1.62521 31.5948 0 29.59 0C27.5852 0 25.96 1.62521 25.96 3.63C25.96 5.63479 27.5852 7.26 29.59 7.26Z" fill="url(#paint0_radial_265_62)"/>
+                        <path d="M41.1198 39.28C43.7598 39.28 45.8998 37.1399 45.8998 34.5C45.8998 31.8601 43.7598 29.72 41.1198 29.72C38.4799 29.72 36.3398 31.8601 36.3398 34.5C36.3398 37.1399 38.4799 39.28 41.1198 39.28Z" fill="url(#paint1_radial_265_62)"/>
+                        <path d="M69.7298 117.96L42.0698 101.84C38.7998 99.93 33.5498 99.95 30.2898 101.87L2.88981 117.99C-0.680191 120.09 -1.00019 123.54 2.22981 125.7L29.6298 144.02C33.2298 146.43 39.1498 146.45 42.7598 144.05L70.4098 125.73C73.6898 123.55 73.3598 120.07 69.7298 117.96Z" fill="url(#paint2_linear_265_62)"/>
+                        <path d="M69.7298 96.5899L42.0698 80.4699C38.7998 78.5599 33.5498 78.5799 30.2898 80.4999L2.88981 96.6199C-0.680191 98.7199 -1.00019 102.17 2.22981 104.33L29.6298 122.65C33.2298 125.06 39.1498 125.08 42.7598 122.68L70.4098 104.36C73.6898 102.18 73.3598 98.6999 69.7298 96.5899ZM57.7598 101.39L40.3798 112.91C38.1098 114.41 34.3898 114.4 32.1298 112.89L14.8998 101.37C12.8698 100.01 13.0798 97.8399 15.3198 96.5299L32.5398 86.3999C34.5898 85.1899 37.8898 85.1799 39.9498 86.3799L57.3398 96.5099C59.6098 97.8299 59.8198 100.02 57.7598 101.39Z" fill="white"/>
+                        <path d="M23.53 65.6199C27.8047 65.6199 31.27 62.1546 31.27 57.8799C31.27 53.6052 27.8047 50.1399 23.53 50.1399C19.2554 50.1399 15.79 53.6052 15.79 57.8799C15.79 62.1546 19.2554 65.6199 23.53 65.6199Z" fill="url(#paint3_radial_265_62)"/>
+                        <path d="M48.8398 94.6601C53.8325 94.6601 57.8798 90.6127 57.8798 85.6201C57.8798 80.6274 53.8325 76.5801 48.8398 76.5801C43.8472 76.5801 39.7998 80.6274 39.7998 85.6201C39.7998 90.6127 43.8472 94.6601 48.8398 94.6601Z" fill="url(#paint4_radial_265_62)"/>
+                        <path d="M119.27 85.1599H105.58L104.64 94.0199C101.89 121.33 95.78 125.76 86.52 124.42L86.72 116.23C90.34 116.7 95.11 115.16 97.19 86.8399L97.86 77.4399H127.45V124.42H119.26V85.1599H119.27Z" fill="white"/>
+                        <path d="M135.11 124.41V77.4399H143.36V110.86L167.99 77.4399H175.24V124.42H166.99V91.0599L142.36 124.41H135.11Z" fill="white"/>
+                        <path d="M203.82 76.7C217.78 76.7 228.31 86.3 228.31 100.93C228.31 115.02 217.77 125.16 203.82 125.16C189.86 125.16 179.39 115.56 179.39 100.93C179.4 87.3 189.39 76.7 203.82 76.7ZM203.82 117.44C213.69 117.44 219.59 110.19 219.59 100.93C219.59 91.2 212.68 84.42 203.82 84.42C194.83 84.42 188.12 91.2 188.12 100.93C188.12 110.32 195.03 117.44 203.82 117.44Z" fill="white"/>
+                        <path d="M94.63 138.2H90.34V145.83H87.77V135.78H97.19V145.83H94.62V138.2H94.63Z" fill="#0BBBEF"/>
+                        <path d="M109.43 135.79H112V136.75C112.62 136.08 113.81 135.54 115.1 135.54C117.87 135.54 119.65 137.68 119.65 140.65C119.65 143.71 117.55 146.07 114.34 146.07C113.45 146.07 112.58 145.91 112 145.58V150.29H109.43V135.79ZM112 139.04V143.1C112.69 143.55 113.27 143.68 114.12 143.68C115.91 143.68 116.93 142.39 116.93 140.71C116.93 139.1 115.99 137.94 114.3 137.94C113.43 137.95 112.63 138.35 112 139.04Z" fill="#0BBBEF"/>
+                        <path d="M136.11 135.54C139.44 135.54 141.58 137.79 141.58 140.81C141.58 143.83 139.44 146.08 136.11 146.08C132.78 146.08 130.64 143.83 130.64 140.81C130.64 137.79 132.79 135.54 136.11 135.54ZM136.11 143.69C137.69 143.69 138.86 142.55 138.86 140.81C138.86 139.11 137.68 137.95 136.11 137.95C134.59 137.95 133.39 139.07 133.39 140.81C133.39 142.48 134.55 143.69 136.11 143.69Z" fill="#0BBBEF"/>
+                        <path d="M151.65 143.44H152.92C153.63 142.5 154.19 140.47 154.33 138.19L154.49 135.78H161.9V143.44H163.57V148.17H161.16V145.83H154.04V148.17H151.65V143.44ZM155.6 143.44H159.33V138.19H156.87L156.8 139.22C156.61 141.34 156.05 142.82 155.6 143.44Z" fill="#0BBBEF"/>
+                        <path d="M180.38 145.83C178.91 149.42 177.97 150.29 176.5 150.29C175.58 150.29 174.92 149.93 174.33 149.51L175.16 147.57C175.43 147.73 175.81 147.93 176.21 147.93C176.86 147.93 177.33 147.42 177.75 146.37L177.97 145.83L173.33 135.78H176.41L178.75 141.27C178.95 141.76 179.08 142.23 179.24 142.72C179.33 142.25 179.42 141.76 179.6 141.25L181.41 135.78H184.33L180.38 145.83Z" fill="#0BBBEF"/>
+                        <path d="M195.25 135.79H197.82V145.84H195.25V135.79ZM200.9 140.56L205.23 145.83H201.88L197.91 140.76L201.53 135.78H204.77L200.9 140.56Z" fill="#0BBBEF"/>
+                        <path d="M215.07 135.79H224.22V138.36H220.94V145.84H218.37V138.36H215.07V135.79Z" fill="#0BBBEF"/>
+                    </g>
+                    <defs>
+                        <radialGradient id="paint0_radial_265_62" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(30.2607 2.6215) scale(3.6262)">
+                            <stop stop-color="#AFDFF9"/>
+                            <stop offset="0.6515" stop-color="#0BBBEF"/>
+                        </radialGradient>
+                        <radialGradient id="paint1_radial_265_62" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(42.0053 33.1733) scale(4.7809)">
+                            <stop stop-color="#AFDFF9"/>
+                            <stop offset="0.6515" stop-color="#0BBBEF"/>
+                        </radialGradient>
+                        <linearGradient id="paint2_linear_265_62" x1="36.3377" y1="100.002" x2="36.3377" y2="146.409" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#AFDFF9"/>
+                            <stop offset="0.6515" stop-color="#0BBBEF"/>
+                        </linearGradient>
+                        <radialGradient id="paint3_radial_265_62" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(24.9664 55.7382) scale(7.7398 7.7398)">
+                            <stop stop-color="#AFDFF9"/>
+                            <stop offset="0.6515" stop-color="#0BBBEF"/>
+                        </radialGradient>
+                        <radialGradient id="paint4_radial_265_62" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(50.5121 83.12) scale(9.037)">
+                            <stop stop-color="#AFDFF9"/>
+                            <stop offset="0.6515" stop-color="#0BBBEF"/>
+                        </radialGradient>
+                        <clipPath id="clip0_265_62">
+                            <rect width="228.32" height="150.3" fill="white"/>
+                        </clipPath>
+                    </defs>
+                </svg>
+            </a>
 
-<footer>
+            <nav class="header_nav">
+                <a class="header_nav_i" href="/about" title="О компании">О компании</a>
+                <a class="header_nav_i" href="/technology" title="Технологии">Технологии</a>
+                <a class="header_nav_i" href="/philosophy" title="Философия">Философия</a>
+                <a class="header_nav_i" href="/science" title="Наука">Наука</a>
+                <a class="header_nav_i" href="/products" title="Продукция">Продукция</a>
+                <a class="header_nav_i" href="/gallery" title="Галерея">Галерея</a>
+                <a class="header_nav_i" href="/contacts" title="Контакты">Контакты</a>
+            </nav>
+        </div>
+    </header>
 
-</footer>
-<script src="./index.js"></script>
+    <main class="main">
+        <section id="section1" class="section">
+            <div class="content"></div>
+        </section>
+    </main>
+
+    <aside class="aside">
+        <nav class="aside_nav">
+            <a class="aside_nav_i" href="/about" title="О компании">О компании</a>
+            <a class="aside_nav_i" href="/technology" title="Технологии">Технологии</a>
+            <a class="aside_nav_i" href="/philosophy" title="Философия">Философия</a>
+            <a class="aside_nav_i" href="/science" title="Наука">Наука</a>
+            <a class="aside_nav_i" href="/products" title="Продукция">Продукция</a>
+            <a class="aside_nav_i" href="/gallery" title="Галерея">Галерея</a>
+            <a class="aside_nav_i" href="/contacts" title="Контакты">Контакты</a>
+        </nav>
+    </aside>
+
+    <footer class="footer">
+        <div class="content">
+            <a class="footer_logo" href="/" title="<%= title %>">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 229 151" fill="none">
+                    <g clip-path="url(#clip0_265_62)">
+                        <path d="M29.59 7.26C31.5948 7.26 33.22 5.63479 33.22 3.63C33.22 1.62521 31.5948 0 29.59 0C27.5852 0 25.96 1.62521 25.96 3.63C25.96 5.63479 27.5852 7.26 29.59 7.26Z" fill="url(#paint0_radial_265_62)"/>
+                        <path d="M41.1198 39.28C43.7598 39.28 45.8998 37.1399 45.8998 34.5C45.8998 31.8601 43.7598 29.72 41.1198 29.72C38.4799 29.72 36.3398 31.8601 36.3398 34.5C36.3398 37.1399 38.4799 39.28 41.1198 39.28Z" fill="url(#paint1_radial_265_62)"/>
+                        <path d="M69.7298 117.96L42.0698 101.84C38.7998 99.93 33.5498 99.95 30.2898 101.87L2.88981 117.99C-0.680191 120.09 -1.00019 123.54 2.22981 125.7L29.6298 144.02C33.2298 146.43 39.1498 146.45 42.7598 144.05L70.4098 125.73C73.6898 123.55 73.3598 120.07 69.7298 117.96Z" fill="url(#paint2_linear_265_62)"/>
+                        <path d="M69.7298 96.5899L42.0698 80.4699C38.7998 78.5599 33.5498 78.5799 30.2898 80.4999L2.88981 96.6199C-0.680191 98.7199 -1.00019 102.17 2.22981 104.33L29.6298 122.65C33.2298 125.06 39.1498 125.08 42.7598 122.68L70.4098 104.36C73.6898 102.18 73.3598 98.6999 69.7298 96.5899ZM57.7598 101.39L40.3798 112.91C38.1098 114.41 34.3898 114.4 32.1298 112.89L14.8998 101.37C12.8698 100.01 13.0798 97.8399 15.3198 96.5299L32.5398 86.3999C34.5898 85.1899 37.8898 85.1799 39.9498 86.3799L57.3398 96.5099C59.6098 97.8299 59.8198 100.02 57.7598 101.39Z" fill="black"/>
+                        <path d="M23.53 65.6199C27.8047 65.6199 31.27 62.1546 31.27 57.8799C31.27 53.6052 27.8047 50.1399 23.53 50.1399C19.2554 50.1399 15.79 53.6052 15.79 57.8799C15.79 62.1546 19.2554 65.6199 23.53 65.6199Z" fill="url(#paint3_radial_265_62)"/>
+                        <path d="M48.8398 94.6601C53.8325 94.6601 57.8798 90.6127 57.8798 85.6201C57.8798 80.6274 53.8325 76.5801 48.8398 76.5801C43.8472 76.5801 39.7998 80.6274 39.7998 85.6201C39.7998 90.6127 43.8472 94.6601 48.8398 94.6601Z" fill="url(#paint4_radial_265_62)"/>
+                        <path d="M119.27 85.1599H105.58L104.64 94.0199C101.89 121.33 95.78 125.76 86.52 124.42L86.72 116.23C90.34 116.7 95.11 115.16 97.19 86.8399L97.86 77.4399H127.45V124.42H119.26V85.1599H119.27Z" fill="black"/>
+                        <path d="M135.11 124.41V77.4399H143.36V110.86L167.99 77.4399H175.24V124.42H166.99V91.0599L142.36 124.41H135.11Z" fill="black"/>
+                        <path d="M203.82 76.7C217.78 76.7 228.31 86.3 228.31 100.93C228.31 115.02 217.77 125.16 203.82 125.16C189.86 125.16 179.39 115.56 179.39 100.93C179.4 87.3 189.39 76.7 203.82 76.7ZM203.82 117.44C213.69 117.44 219.59 110.19 219.59 100.93C219.59 91.2 212.68 84.42 203.82 84.42C194.83 84.42 188.12 91.2 188.12 100.93C188.12 110.32 195.03 117.44 203.82 117.44Z" fill="black"/>
+                        <path d="M94.63 138.2H90.34V145.83H87.77V135.78H97.19V145.83H94.62V138.2H94.63Z" fill="#0BBBEF"/>
+                        <path d="M109.43 135.79H112V136.75C112.62 136.08 113.81 135.54 115.1 135.54C117.87 135.54 119.65 137.68 119.65 140.65C119.65 143.71 117.55 146.07 114.34 146.07C113.45 146.07 112.58 145.91 112 145.58V150.29H109.43V135.79ZM112 139.04V143.1C112.69 143.55 113.27 143.68 114.12 143.68C115.91 143.68 116.93 142.39 116.93 140.71C116.93 139.1 115.99 137.94 114.3 137.94C113.43 137.95 112.63 138.35 112 139.04Z" fill="#0BBBEF"/>
+                        <path d="M136.11 135.54C139.44 135.54 141.58 137.79 141.58 140.81C141.58 143.83 139.44 146.08 136.11 146.08C132.78 146.08 130.64 143.83 130.64 140.81C130.64 137.79 132.79 135.54 136.11 135.54ZM136.11 143.69C137.69 143.69 138.86 142.55 138.86 140.81C138.86 139.11 137.68 137.95 136.11 137.95C134.59 137.95 133.39 139.07 133.39 140.81C133.39 142.48 134.55 143.69 136.11 143.69Z" fill="#0BBBEF"/>
+                        <path d="M151.65 143.44H152.92C153.63 142.5 154.19 140.47 154.33 138.19L154.49 135.78H161.9V143.44H163.57V148.17H161.16V145.83H154.04V148.17H151.65V143.44ZM155.6 143.44H159.33V138.19H156.87L156.8 139.22C156.61 141.34 156.05 142.82 155.6 143.44Z" fill="#0BBBEF"/>
+                        <path d="M180.38 145.83C178.91 149.42 177.97 150.29 176.5 150.29C175.58 150.29 174.92 149.93 174.33 149.51L175.16 147.57C175.43 147.73 175.81 147.93 176.21 147.93C176.86 147.93 177.33 147.42 177.75 146.37L177.97 145.83L173.33 135.78H176.41L178.75 141.27C178.95 141.76 179.08 142.23 179.24 142.72C179.33 142.25 179.42 141.76 179.6 141.25L181.41 135.78H184.33L180.38 145.83Z" fill="#0BBBEF"/>
+                        <path d="M195.25 135.79H197.82V145.84H195.25V135.79ZM200.9 140.56L205.23 145.83H201.88L197.91 140.76L201.53 135.78H204.77L200.9 140.56Z" fill="#0BBBEF"/>
+                        <path d="M215.07 135.79H224.22V138.36H220.94V145.84H218.37V138.36H215.07V135.79Z" fill="#0BBBEF"/>
+                    </g>
+                    <defs>
+                        <radialGradient id="paint0_radial_265_62" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(30.2607 2.6215) scale(3.6262)">
+                            <stop stop-color="#AFDFF9"/>
+                            <stop offset="0.6515" stop-color="#0BBBEF"/>
+                        </radialGradient>
+                        <radialGradient id="paint1_radial_265_62" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(42.0053 33.1733) scale(4.7809)">
+                            <stop stop-color="#AFDFF9"/>
+                            <stop offset="0.6515" stop-color="#0BBBEF"/>
+                        </radialGradient>
+                        <linearGradient id="paint2_linear_265_62" x1="36.3377" y1="100.002" x2="36.3377" y2="146.409" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#AFDFF9"/>
+                            <stop offset="0.6515" stop-color="#0BBBEF"/>
+                        </linearGradient>
+                        <radialGradient id="paint3_radial_265_62" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(24.9664 55.7382) scale(7.7398 7.7398)">
+                            <stop stop-color="#AFDFF9"/>
+                            <stop offset="0.6515" stop-color="#0BBBEF"/>
+                        </radialGradient>
+                        <radialGradient id="paint4_radial_265_62" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(50.5121 83.12) scale(9.037)">
+                            <stop stop-color="#AFDFF9"/>
+                            <stop offset="0.6515" stop-color="#0BBBEF"/>
+                        </radialGradient>
+                        <clipPath id="clip0_265_62">
+                            <rect width="228.32" height="150.3" fill="white"/>
+                        </clipPath>
+                    </defs>
+                </svg>
+            </a>
+
+            <dl class="footer_info">
+                <dt class="footer_info_head">Навигация</dt>
+
+                <dd class="footer_info_body">
+                    <nav class="footer_nav">
+                        <a class="footer_nav_i" href="/about" title="О компании">О компании</a>
+                        <a class="footer_nav_i" href="/technology" title="Технологии">Технологии</a>
+                        <a class="footer_nav_i" href="/philosophy" title="Философия">Философия</a>
+                        <a class="footer_nav_i" href="/science" title="Наука">Наука</a>
+                        <a class="footer_nav_i" href="/products" title="Продукция">Продукция</a>
+                        <a class="footer_nav_i" href="/gallery" title="Галерея">Галерея</a>
+                        <a class="footer_nav_i" href="/contacts" title="Контакты">Контакты</a>
+                    </nav>
+                </dd>
+
+                <dt class="footer_info_head">Контакты</dt>
+
+                <dd class="footer_info_body">
+                    <nav class="footer_nav">
+                        <a class="footer_nav_i" href="mailto:info@lioproduct.ru" title="info@lioproduct.ru">info@lioproduct.ru</a>
+                        <a class="footer_nav_i" href="tel:+74951089909" title="+7 495 108 99 09">+7 495 108 99 09</a>
+                    </nav>
+                </dd>
+            </dl>
+        </div>
+
+        <div class="content">
+            <span class="footer-copy">Copyright © 2023 ЛИО-продукт</span>
+            <a class="footer-link" href="/policy.html" title="Политика конфиденциальности">Политика конфиденциальности</a>
+        </div>
+    </footer>
+</div>
+
 </body>
 </html>
