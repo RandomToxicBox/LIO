@@ -34,7 +34,7 @@ const APP_URL = 'http://localhost';
 
 const ROOT_DIR = __dirname;
 const SRC_DIR = path.resolve(ROOT_DIR, 'src');
-const DIST_DIR = path.resolve(ROOT_DIR, 'dist');
+const DIST_DIR = path.resolve(ROOT_DIR, 'docs');
 
 const TEMPLATE_PATH = 'index.html';
 const FONTS_PATH = 'fonts';
